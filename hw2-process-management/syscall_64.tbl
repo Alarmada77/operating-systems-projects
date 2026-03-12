@@ -1,0 +1,13 @@
+# These 4 lines must be added to:
+# arch/x86/entry/syscalls/syscall_64.tbl
+# right after the existing entry for statx (line 332):
+#
+#   332     common  statx                   sys_statx
+#
+# Add the following lines immediately after:
+
+333     common  hello                   sys_hello
+334     common  set_ban                 sys_set_ban
+335     common  get_ban                 sys_get_ban
+336     common  check_ban               sys_check_ban
+337     common  flip_ban_branch         sys_flip_ban_branch
